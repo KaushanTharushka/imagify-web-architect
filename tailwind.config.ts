@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,22 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Custom colors for the sourcing website
+				sourcing: {
+					'green': {
+						DEFAULT: '#1e7e34',
+						light: '#2e9e44',
+						dark: '#166628',
+					},
+					'orange': {
+						DEFAULT: '#e67e22',
+						light: '#f39c12',
+						dark: '#d35400',
+					},
+					'light': '#f5f5f5',
+					'text': '#333333',
+				},
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
