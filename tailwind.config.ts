@@ -77,6 +77,10 @@ export default {
 					},
 					'light': '#f5f5f5',
 					'text': '#333333',
+					'footer': {
+						DEFAULT: '#1e7e34',
+						dark: '#166628',
+					}
 				},
 			},
 			borderRadius: {

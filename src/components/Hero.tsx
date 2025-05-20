@@ -13,7 +13,7 @@ const Hero: React.FC = () => {
           <p className="text-white text-lg md:text-xl mb-8">
             Global Sourcing | Agro Products | Business & Supply Chain Consultancy | Branding
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
             <Button className="bg-white text-sourcing-green hover:bg-gray-100">
               Learn More
             </Button>
