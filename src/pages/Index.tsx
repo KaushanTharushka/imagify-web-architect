@@ -7,6 +7,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ProcessSection from "@/components/ProcessSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
+import ChatSupport from "@/components/ChatSupport";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <ContactSection />
       </main>
       <Footer />
+      <ChatSupport />
     </div>
   );
 };

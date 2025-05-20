@@ -1,5 +1,11 @@
 
 import React from 'react';
+import { 
+  Accordion, 
+  AccordionContent, 
+  AccordionItem, 
+  AccordionTrigger 
+} from '@/components/ui/accordion';
 
 const SolutionsSection: React.FC = () => {
   return (
@@ -105,20 +111,66 @@ const SolutionsSection: React.FC = () => {
         
         <div className="flex justify-center">
           <div className="max-w-4xl">
-            <div className="flex justify-center mb-8">
-              <svg className="w-20 h-20 text-sourcing-green" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M15 4h-3v5a1 1 0 0 1-2 0V4H7a1 1 0 0 0-1 1v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a1 1 0 0 0-1-1Zm-3 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm0 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
-                <path d="M9 6h6v2H9z"/>
-              </svg>
-            </div>
-            <h3 className="text-3xl font-bold mb-4 text-center text-sourcing-green">AGRO BUSINESS</h3>
-            <p className="text-center text-lg mb-6">
-              Revive Agro, a trusted name in sourcing premium agro products, with a strong emphasis on sustainability and quality.
-            </p>
-            <p className="text-center font-bold mb-4">Flagship Product:</p>
-            <p className="text-center mb-6">
-              True Ceylon Cinnamon under the Cinnatera brand. Known for its unmatched aroma, flavor, and medicinal properties.
-            </p>
+            <Accordion type="single" collapsible className="w-full">
+              <AccordionItem value="agro-business">
+                <AccordionTrigger className="text-center">
+                  <div className="flex flex-col items-center">
+                    <svg className="w-16 h-16 text-sourcing-green mb-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M15 4h-3v5a1 1 0 0 1-2 0V4H7a1 1 0 0 0-1 1v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a1 1 0 0 0-1-1Zm-3 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm0 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
+                      <path d="M9 6h6v2H9z"/>
+                    </svg>
+                    <h3 className="text-3xl font-bold text-sourcing-green">AGRO BUSINESS</h3>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="text-center px-4">
+                  <p className="text-lg mb-6">
+                    Revive Agro, a trusted name in sourcing premium agro products, with a strong emphasis on sustainability and quality.
+                  </p>
+                  <p className="font-bold mb-4">Flagship Product:</p>
+                  <p className="mb-6">
+                    True Ceylon Cinnamon under the Cinnatera brand. Known for its unmatched aroma, flavor, and medicinal properties.
+                  </p>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-6">
+                    <div>
+                      <h4 className="font-bold text-lg mb-3">Product Range:</h4>
+                      <ul className="space-y-2 text-left">
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>True Ceylon Cinnamon (sticks, powder, oil)</span>
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>Organic spices: black pepper, turmeric, cloves</span>
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>Coconut products: organic virgin coconut oil, desiccated coconut</span>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <div>
+                      <h4 className="font-bold text-lg mb-3">Value Proposition:</h4>
+                      <ul className="space-y-2 text-left">
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>Guaranteed purity with traceable supply chains</span>
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>Ethical partnerships with Sri Lankan farmers and producers</span>
+                        </li>
+                        <li className="flex items-center">
+                          <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
+                          <span>Competitive pricing for high-demand global markets</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            </Accordion>
           </div>
         </div>
       </div>
