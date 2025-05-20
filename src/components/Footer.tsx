@@ -14,20 +14,20 @@ const Footer: React.FC = () => {
                   <path d="M55 45H65L55 35V45Z" fill="#ffffff"/>
                 </svg>
               </div>
-              <h2 className="text-xl font-bold">AgroSource</h2>
+              <h2 className="text-xl font-bold">Revive Agro</h2>
             </div>
-            <p className="text-gray-400 mb-4">Empowering Growth Through Strategic Sourcing</p>
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} AgroSource. All rights reserved.</p>
+            <p className="text-gray-400 mb-4">Empowering Growth Through Strategic Sourcing, Agro Innovation, and Business Excellence</p>
+            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Revive Agro. All rights reserved.</p>
           </div>
           
           <div>
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-2">Solutions</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Agricultural Sourcing</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Global Sourcing</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Agro Products</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Business Consultancy</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition">Supply Chain Management</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Market Intelligence</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Quality Assurance</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Logistics Optimization</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Branding</a></li>
             </ul>
           </div>
           
@@ -36,7 +36,7 @@ const Footer: React.FC = () => {
             <ul className="space-y-2">
               <li><a href="#about" className="text-gray-400 hover:text-white transition">About Us</a></li>
               <li><a href="#services" className="text-gray-400 hover:text-white transition">Services</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Careers</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Team</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition">Partners</a></li>
               <li><a href="#contact" className="text-gray-400 hover:text-white transition">Contact</a></li>
             </ul>
@@ -46,10 +46,10 @@ const Footer: React.FC = () => {
             <h3 className="font-bold text-lg mb-4 border-b border-gray-700 pb-2">Resources</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-400 hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition">Market Reports</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition">Case Studies</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition">FAQ</a></li>
               <li><a href="#" className="text-gray-400 hover:text-white transition">Privacy Policy</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition">Terms of Service</a></li>
             </ul>
           </div>
         </div>
@@ -57,7 +57,7 @@ const Footer: React.FC = () => {
       
       <div className="bg-gray-950 py-4">
         <div className="container mx-auto px-4 text-center text-gray-500 text-sm">
-          <p>This website is designed to provide general information about AgroSource and our services. The content is subject to change without notice.</p>
+          <p>This website is designed to provide general information about Revive Agro and our services. The content is subject to change without notice.</p>
         </div>
       </div>
     </footer>

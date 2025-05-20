@@ -13,7 +13,7 @@ const Header: React.FC = () => {
               <path d="M55 45H65L55 35V45Z" fill="#1e7e34"/>
             </svg>
           </div>
-          <h1 className="text-2xl font-bold text-sourcing-green">AgroSource</h1>
+          <h1 className="text-2xl font-bold text-sourcing-green">Revive Agro</h1>
         </div>
         <nav className="flex-grow">
           <ul className="flex flex-wrap justify-center md:justify-end gap-6">

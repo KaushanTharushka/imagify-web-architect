@@ -10,6 +10,8 @@ const AboutSection: React.FC = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-4">
+            <h3 className="text-2xl font-bold mb-4 text-sourcing-green">Who We Are</h3>
+            <p className="text-gray-600 mb-6">We are Consultancy in:</p>
             <div className="flex items-start">
               <div className="mr-4 p-2 bg-sourcing-green rounded-full text-white">
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -17,8 +19,7 @@ const AboutSection: React.FC = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">Global Network</h3>
-                <p className="text-gray-600">Over 20 years of experience connecting businesses with the best agricultural resources across 30+ countries.</p>
+                <p className="text-gray-600">Driving operational efficiency and productivity across industries</p>
               </div>
             </div>
             
@@ -29,8 +30,7 @@ const AboutSection: React.FC = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">Quality Assurance</h3>
-                <p className="text-gray-600">Rigorous quality control processes and certifications to ensure only the highest quality agricultural products.</p>
+                <p className="text-gray-600">Optimizing supply chains for cost reduction and enhanced performance</p>
               </div>
             </div>
             
@@ -41,8 +41,18 @@ const AboutSection: React.FC = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-medium text-lg">Cost Optimization</h3>
-                <p className="text-gray-600">Strategic sourcing practices that typically reduce procurement costs by 15-25% for our clients.</p>
+                <p className="text-gray-600">Supporting sustainable global sourcing and agro product distribution</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start">
+              <div className="mr-4 p-2 bg-sourcing-green rounded-full text-white">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+              </div>
+              <div>
+                <p className="text-gray-600">Elevating branding for professionals and executives</p>
               </div>
             </div>
           </div>
@@ -53,7 +63,7 @@ const AboutSection: React.FC = () => {
                 <h3 className="font-bold text-xl">MISSION</h3>
               </CardHeader>
               <CardContent className="pt-4">
-                <p>To revolutionize agricultural supply chains through sustainable sourcing practices and innovative solutions that empower businesses to thrive in a competitive global market.</p>
+                <p>To deliver measurable growth and sustainability through innovative strategies tailored to client needs</p>
               </CardContent>
             </Card>
             
@@ -62,29 +72,23 @@ const AboutSection: React.FC = () => {
                 <h3 className="font-bold text-xl">VISION</h3>
               </CardHeader>
               <CardContent className="pt-4">
-                <p>To be the world's leading agricultural sourcing partner, driving sustainable growth and creating lasting value for our clients, partners, and communities globally.</p>
+                <p>To be the trusted partner for businesses worldwide, excelling in sourcing, consultancy, and personal development</p>
               </CardContent>
             </Card>
           </div>
         </div>
         
         <div className="mt-16">
+          <h3 className="text-2xl font-bold mb-6 text-center text-sourcing-green">OUR SPECIALTY</h3>
           <div className="stats-container">
             <div className="stat-item">
-              <h4 className="text-4xl font-bold text-sourcing-green mb-2">30+</h4>
-              <p className="text-gray-600">Countries</p>
+              <p className="text-gray-600">Expertise from over a decade of leadership in operations and supply chains</p>
             </div>
             <div className="stat-item">
-              <h4 className="text-4xl font-bold text-sourcing-green mb-2">500+</h4>
-              <p className="text-gray-600">Suppliers</p>
+              <p className="text-gray-600">Proven track record of enhancing productivity and revenue growth for global clients</p>
             </div>
             <div className="stat-item">
-              <h4 className="text-4xl font-bold text-sourcing-green mb-2">2000+</h4>
-              <p className="text-gray-600">Projects</p>
-            </div>
-            <div className="stat-item">
-              <h4 className="text-4xl font-bold text-sourcing-green mb-2">98%</h4>
-              <p className="text-gray-600">Client Satisfaction</p>
+              <p className="text-gray-600">Commitment to ethical practices and sustainable growth</p>
             </div>
           </div>
         </div>

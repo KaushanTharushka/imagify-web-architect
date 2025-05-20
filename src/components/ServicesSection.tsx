@@ -12,34 +12,37 @@ const ServicesSection: React.FC = () => {
           <div className="service-card">
             <div className="h-48 bg-gray-300 relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1589923188900-85dae523342b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Grains and cereals" 
+                src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                alt="Plant-based nut butters" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">GRAINS & CEREALS</h3>
+                <h3 className="font-bold text-xl text-white">PLANT-BASED NUT BUTTERS</h3>
               </div>
             </div>
             <div className="service-card-body">
+              <p className="font-semibold mb-3">VEGAN HIGH-PROTEIN NUT BUTTER</p>
+              <p className="text-sm mb-4">Crafted with premium ingredients like almonds, cashews, pea protein, and chocolate liquor, our nut butter offers 14g of plant protein per 40g serving. It's rich, indulgent, and perfect for health-conscious consumers.</p>
+              <p className="font-semibold mb-2">Key Features:</p>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Wheat, Corn, Rice
+                  High protein, low sugar
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Barley, Oats, Rye
+                  Made with sustainable and ethically sourced ingredients
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Quality Certifications
+                  Available in unique flavors
                 </li>
               </ul>
             </div>
@@ -51,34 +54,37 @@ const ServicesSection: React.FC = () => {
           <div className="service-card">
             <div className="h-48 bg-gray-300 relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1563289142-b991771c76b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Fruits and vegetables" 
+                src="https://images.unsplash.com/photo-1570168986600-7b181e4a8ab0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                alt="True Ceylon Cinnamon" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">FRUITS & VEGETABLES</h3>
+                <h3 className="font-bold text-xl text-white">TRUE CEYLON CINNAMON</h3>
               </div>
             </div>
             <div className="service-card-body">
+              <p className="font-semibold mb-3">AUTHENTIC TRUE CEYLON CINNAMON</p>
+              <p className="text-sm mb-4">Sourced directly from sustainable farms in Sri Lanka.</p>
+              <p className="font-semibold mb-2">Product Range:</p>
               <ul className="space-y-2">
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Fresh & Processed
+                  Powdered Cinnamon for culinary and medicinal uses
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Organic Options
+                  Cinnamon sticks for teas, desserts, and aromatics
                 </li>
                 <li className="flex items-center">
                   <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                   </svg>
-                  Year-round Supply
+                  Bulk and retail packaging available
                 </li>
               </ul>
             </div>
@@ -90,104 +96,135 @@ const ServicesSection: React.FC = () => {
           <div className="service-card">
             <div className="h-48 bg-gray-300 relative overflow-hidden">
               <img 
-                src="https://images.unsplash.com/photo-1615485290382-441e4d049cb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Nuts and seeds" 
+                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                alt="Animal Feed Solutions" 
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
               <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">NUTS & SEEDS</h3>
+                <h3 className="font-bold text-xl text-white">ANIMAL FEED SOLUTIONS</h3>
               </div>
             </div>
             <div className="service-card-body">
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Premium Quality
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Various Processing
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Bulk Packaging
-                </li>
-              </ul>
+              <p className="font-semibold mb-2">NUTRITIONAL FEED PRODUCTS:</p>
+              <p className="text-sm mb-4">We produce high-quality, plant-based animal feed designed to support healthier livestock and sustainable farming practices.</p>
+              <p className="font-semibold mb-2">CUSTOMIZED FEED FORMULATIONS:</p>
+              <p className="text-sm mb-4">Tailored feed solutions for specific livestock needs, focusing on nutritional balance and cost efficiency.</p>
+              <p className="font-semibold mb-2">SUSTAINABILITY COMMITMENT:</p>
+              <p className="text-sm">Utilizing byproducts from our manufacturing processes to minimize waste and create eco-friendly feed options.</p>
             </div>
             <div className="service-card-footer">
               <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
             </div>
           </div>
         </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="service-card">
+            <div className="service-card-header">
+              <h3 className="font-bold text-xl">SUSTAINABLE AGRICULTURE SOLUTIONS</h3>
+            </div>
+            <div className="service-card-body">
+              <ul className="space-y-4">
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span><strong>Farm Partnerships:</strong> We collaborate with small-scale farmers, providing them with the tools, training, and resources needed to implement sustainable farming practices.</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span><strong>Supply Chain Transparency:</strong> Our end-to-end traceability system ensures that every product meets the highest standards of quality and ethics.</span>
+                </li>
+                <li className="flex items-start">
+                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  <span><strong>Eco-Friendly Packaging:</strong> Dedicated to reducing waste, we use biodegradable, recyclable, and reusable packaging across our product lines.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="service-card">
+            <div className="service-card-header">
+              <h3 className="font-bold text-xl">CUSTOM FOOD PRODUCT DEVELOPMENT</h3>
+            </div>
+            <div className="service-card-body">
+              <p className="mb-4">TAILORED SOLUTIONS FOR BUSINESSES SEEKING TO DEVELOP PLANT-BASED OR HEALTH-FOCUSED PRODUCTS UNDER THEIR OWN BRAND. OUR SERVICES INCLUDE:</p>
+              <ul className="space-y-2">
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  Ingredient sourcing
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  Recipe formulation
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  Packaging design and branding support
+                </li>
+                <li className="flex items-center">
+                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                  </svg>
+                  Manufacturing and distribution
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
         
-        <h2 className="section-heading mt-16">BUSINESS & SUPPLY CHAIN CONSULTANCY</h2>
+        <h2 className="section-heading mt-16">SPECIALIST SERVICES</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+          <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+              </svg>
+            </div>
+            <h3 className="font-bold text-lg mb-2">Agricultural Consulting</h3>
+            <p className="text-gray-600 text-sm">Expertise in sustainable farming practices, crop optimization, and resource management.</p>
+          </div>
+          
+          <div className="text-center p-6 bg-white rounded-lg shadow-md">
+            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
+              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10"></path>
+              </svg>
+            </div>
+            <h3 className="font-bold text-lg mb-2">Supply Chain Advisory</h3>
+            <p className="text-gray-600 text-sm">Helping businesses implement transparent and efficient supply chain solutions.</p>
+          </div>
+          
           <div className="text-center p-6 bg-white rounded-lg shadow-md">
             <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
               </svg>
             </div>
-            <h3 className="font-bold text-lg mb-2">Audit</h3>
-            <p className="text-gray-600 text-sm">Supply chain performance evaluation and gap analysis</p>
+            <h3 className="font-bold text-lg mb-2">Sustainability Audits</h3>
+            <p className="text-gray-600 text-sm">Assessing and improving the environmental impact of farming and production operations.</p>
           </div>
           
           <div className="text-center p-6 bg-white rounded-lg shadow-md">
             <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
               <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
               </svg>
             </div>
-            <h3 className="font-bold text-lg mb-2">Optimize</h3>
-            <p className="text-gray-600 text-sm">Strategic reconfiguration of sourcing and distribution networks</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Implement</h3>
-            <p className="text-gray-600 text-sm">End-to-end deployment of optimized supply chain solutions</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Track</h3>
-            <p className="text-gray-600 text-sm">Continuous monitoring and performance evaluation</p>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-sourcing-orange">
-            <h3 className="font-bold text-xl mb-4 text-sourcing-orange">Market Entry Strategy</h3>
-            <p className="mb-4 text-gray-600">Comprehensive analysis and planning for successful entry into new agricultural markets.</p>
-            <Button className="bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-sourcing-orange">
-            <h3 className="font-bold text-xl mb-4 text-sourcing-orange">Supplier Development</h3>
-            <p className="mb-4 text-gray-600">Building and nurturing a network of reliable suppliers that meet quality standards.</p>
-            <Button className="bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md border-t-4 border-sourcing-orange">
-            <h3 className="font-bold text-xl mb-4 text-sourcing-orange">Logistics Optimization</h3>
-            <p className="mb-4 text-gray-600">Streamlining transportation and warehousing to reduce costs and improve efficiency.</p>
-            <Button className="bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
+            <h3 className="font-bold text-lg mb-2">Training Programs</h3>
+            <p className="text-gray-600 text-sm">Workshops and training sessions for farmers and businesses to enhance productivity and adopt eco-conscious practices.</p>
           </div>
         </div>
       </div>
