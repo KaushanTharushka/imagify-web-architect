@@ -5,14 +5,15 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-sourcing-footer text-white">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <div className="flex items-center mb-6">
               <div className="mr-2">
-                <svg className="w-8 h-8" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M50 0C22.4 0 0 22.4 0 50C0 77.6 22.4 100 50 100C77.6 100 100 77.6 100 50C100 22.4 77.6 0 50 0ZM70 75C70 77.8 67.8 80 65 80H35C32.2 80 30 77.8 30 75V35C30 32.2 32.2 30 35 30H55L70 45V75Z" fill="#ffffff"/>
-                  <path d="M55 45H65L55 35V45Z" fill="#ffffff"/>
-                </svg>
+                <img 
+                  src="/lovable-uploads/d80175a3-0256-4e4b-b915-a6bdc9357e27.png" 
+                  alt="Revive Agro Logo" 
+                  className="h-12 w-auto"
+                />
               </div>
               <h2 className="text-xl font-bold">Revive Agro</h2>
             </div>
@@ -41,22 +42,16 @@ const Footer: React.FC = () => {
               <li><a href="#contact" className="text-gray-200 hover:text-white transition">Contact</a></li>
             </ul>
           </div>
-          
-          <div>
-            <h3 className="font-bold text-lg mb-4 border-b border-sourcing-green-dark pb-2">Resources</h3>
-            <ul className="space-y-2">
-              <li><a href="#" className="text-gray-200 hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition">Case Studies</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition">FAQ</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition">Privacy Policy</a></li>
-              <li><a href="#" className="text-gray-200 hover:text-white transition">Terms of Service</a></li>
-            </ul>
-          </div>
         </div>
       </div>
       
       <div className="bg-sourcing-footer-dark py-4">
-        <div className="container mx-auto px-4 text-center text-gray-300 text-sm">
+        <div className="container mx-auto px-4 text-center text-gray-300 text-sm flex items-center justify-center">
+          <img 
+            src="/lovable-uploads/d80175a3-0256-4e4b-b915-a6bdc9357e27.png" 
+            alt="Revive Agro Logo" 
+            className="h-8 w-auto mr-2"
+          />
           <p>This website is designed to provide general information about Revive Agro and our services. The content is subject to change without notice.</p>
         </div>
       </div>

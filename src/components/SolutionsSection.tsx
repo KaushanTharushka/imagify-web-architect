@@ -6,6 +6,7 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from '@/components/ui/accordion';
+import { Leaf, Wheat, TreeDeciduous, Sprout } from 'lucide-react';
 
 const SolutionsSection: React.FC = () => {
   return (
@@ -87,29 +88,76 @@ const SolutionsSection: React.FC = () => {
           <h2 className="section-heading">CLIENT SUCCESS</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-sourcing-green">
-              <h3 className="font-bold text-xl mb-3 text-sourcing-green">Global Sourcing</h3>
-              <p className="text-gray-600">Efficiently connecting businesses with reliable, cost-effective suppliers worldwide.</p>
+            <div className="bg-soft-green hover:bg-green-50 transition-all duration-300 p-8 rounded-lg border-l-4 border-sourcing-green shadow-md transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <span className="p-3 bg-sourcing-green text-white rounded-full">
+                  <Leaf className="h-8 w-8" />
+                </span>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-sourcing-green text-center">Global Sourcing</h3>
+              <p className="text-gray-600 text-center">Efficiently connecting businesses with reliable, cost-effective suppliers worldwide.</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-sourcing-green">
-              <h3 className="font-bold text-xl mb-3 text-sourcing-green">Agro Products</h3>
-              <p className="text-gray-600">Exporting premium products, such as True Ceylon Cinnamon, through ethical sourcing practices.</p>
+            <div className="bg-soft-yellow hover:bg-yellow-50 transition-all duration-300 p-8 rounded-lg border-l-4 border-sourcing-green shadow-md transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <span className="p-3 bg-sourcing-green text-white rounded-full">
+                  <Wheat className="h-8 w-8" />
+                </span>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-sourcing-green text-center">Agro Products</h3>
+              <p className="text-gray-600 text-center">Exporting premium products, such as True Ceylon Cinnamon, through ethical sourcing practices.</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-sourcing-green">
-              <h3 className="font-bold text-xl mb-3 text-sourcing-green">Branding</h3>
-              <p className="text-gray-600">Empowering businesses and professionals to establish themselves as thought leaders in their industries.</p>
+            <div className="bg-soft-peach hover:bg-orange-50 transition-all duration-300 p-8 rounded-lg border-l-4 border-sourcing-green shadow-md transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <span className="p-3 bg-sourcing-green text-white rounded-full">
+                  <TreeDeciduous className="h-8 w-8" />
+                </span>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-sourcing-green text-center">Branding</h3>
+              <p className="text-gray-600 text-center">Empowering businesses and professionals to establish themselves as thought leaders in their industries.</p>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-lg border-l-4 border-sourcing-green">
-              <h3 className="font-bold text-xl mb-3 text-sourcing-green">Business & Supply Chain Consultancy</h3>
-              <p className="text-gray-600">Designing and implementing optimized workflows, Agile methodologies, and strategic plans.</p>
+            <div className="bg-soft-gray hover:bg-gray-100 transition-all duration-300 p-8 rounded-lg border-l-4 border-sourcing-green shadow-md transform hover:-translate-y-1">
+              <div className="flex justify-center mb-6">
+                <span className="p-3 bg-sourcing-green text-white rounded-full">
+                  <Sprout className="h-8 w-8" />
+                </span>
+              </div>
+              <h3 className="font-bold text-xl mb-3 text-sourcing-green text-center">Business & Supply Chain Consultancy</h3>
+              <p className="text-gray-600 text-center">Designing and implementing optimized workflows, Agile methodologies, and strategic plans.</p>
             </div>
           </div>
         </div>
         
-        <div className="flex justify-center">
+        <div className="bg-gradient-to-r from-[#F2FCE2] to-[#FEF7CD] rounded-xl p-8 shadow-lg">
+          <h2 className="text-3xl font-bold mb-8 text-center text-sourcing-green">OUR SPECIALTY</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="specialty-item bg-white/80 rounded-lg p-6 shadow-md flex flex-col items-center">
+              <span className="p-3 bg-sourcing-green text-white rounded-full mb-4">
+                <TreeDeciduous className="h-6 w-6" />
+              </span>
+              <p className="text-gray-700 text-center font-medium">Expertise from over a decade of leadership in operations and supply chains</p>
+            </div>
+            
+            <div className="specialty-item bg-white/80 rounded-lg p-6 shadow-md flex flex-col items-center">
+              <span className="p-3 bg-sourcing-orange text-white rounded-full mb-4">
+                <Sprout className="h-6 w-6" />
+              </span>
+              <p className="text-gray-700 text-center font-medium">Proven track record of enhancing productivity and revenue growth for global clients</p>
+            </div>
+            
+            <div className="specialty-item bg-white/80 rounded-lg p-6 shadow-md flex flex-col items-center">
+              <span className="p-3 bg-sourcing-green text-white rounded-full mb-4">
+                <Leaf className="h-6 w-6" />
+              </span>
+              <p className="text-gray-700 text-center font-medium">Commitment to ethical practices and sustainable growth</p>
+            </div>
+          </div>
+        </div>
+        
+        <div className="flex justify-center mt-12">
           <div className="max-w-4xl">
             <Accordion type="single" collapsible className="w-full">
               <AccordionItem value="agro-business">
