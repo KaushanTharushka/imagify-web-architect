@@ -26,10 +26,11 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <div className="mr-2">
-            <svg className="w-10 h-10" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M50 0C22.4 0 0 22.4 0 50C0 77.6 22.4 100 50 100C77.6 100 100 77.6 100 50C100 22.4 77.6 0 50 0ZM70 75C70 77.8 67.8 80 65 80H35C32.2 80 30 77.8 30 75V35C30 32.2 32.2 30 35 30H55L70 45V75Z" fill="#1e7e34"/>
-              <path d="M55 45H65L55 35V45Z" fill="#1e7e34"/>
-            </svg>
+            <img 
+              src="/lovable-uploads/d80175a3-0256-4e4b-b915-a6bdc9357e27.png" 
+              alt="Revive Agro Logo" 
+              className="h-12 w-auto"
+            />
           </div>
           <h1 className="text-2xl font-bold text-sourcing-green">Revive Agro</h1>
         </div>

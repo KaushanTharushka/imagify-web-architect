@@ -1,188 +1,202 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 const ServicesSection: React.FC = () => {
+  const [activeTab, setActiveTab] = useState("products");
+  
   return (
     <section id="services" className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <h2 className="section-heading">OUR PRODUCT AND SERVICE PORTFOLIO</h2>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          <div className="service-card">
-            <div className="h-48 bg-gray-300 relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1590779033100-9f60a05a013d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Plant-based nut butters" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">PLANT-BASED NUT BUTTERS</h3>
+        <Tabs defaultValue="products" className="w-full mb-8">
+          <TabsList className="grid w-full grid-cols-2 mb-8">
+            <TabsTrigger value="products">Products</TabsTrigger>
+            <TabsTrigger value="services">Services</TabsTrigger>
+          </TabsList>
+          
+          <TabsContent value="products">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+              <div className="service-card">
+                <div className="h-48 bg-gray-300 relative overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/72f8e389-b1da-421c-b3be-52fcc9c8dbdb.png" 
+                    alt="Plant-based nut butters" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                    <h3 className="font-bold text-xl text-white">PLANT-BASED NUT BUTTERS</h3>
+                  </div>
+                </div>
+                <div className="service-card-body">
+                  <p className="font-semibold mb-3">VEGAN HIGH-PROTEIN NUT BUTTER</p>
+                  <p className="text-sm mb-4">Crafted with premium ingredients like almonds, cashews, pea protein, and chocolate liquor, our nut butter offers 14g of plant protein per 40g serving. It's rich, indulgent, and perfect for health-conscious consumers.</p>
+                  <p className="font-semibold mb-2">Key Features:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      High protein, low sugar
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Made with sustainable and ethically sourced ingredients
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Available in unique flavors
+                    </li>
+                  </ul>
+                </div>
+                <div className="service-card-footer">
+                  <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
+                </div>
+              </div>
+              
+              <div className="service-card">
+                <div className="h-48 bg-gray-300 relative overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/d36e6b8d-5a0d-4897-b265-e10812847f0f.png" 
+                    alt="True Ceylon Cinnamon" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                    <h3 className="font-bold text-xl text-white">TRUE CEYLON CINNAMON</h3>
+                  </div>
+                </div>
+                <div className="service-card-body">
+                  <p className="font-semibold mb-3">AUTHENTIC TRUE CEYLON CINNAMON</p>
+                  <p className="text-sm mb-4">Sourced directly from sustainable farms in Sri Lanka.</p>
+                  <p className="font-semibold mb-2">Product Range:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Powdered Cinnamon for culinary and medicinal uses
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Cinnamon sticks for teas, desserts, and aromatics
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Bulk and retail packaging available
+                    </li>
+                  </ul>
+                </div>
+                <div className="service-card-footer">
+                  <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
+                </div>
+              </div>
+              
+              <div className="service-card">
+                <div className="h-48 bg-gray-300 relative overflow-hidden">
+                  <img 
+                    src="/lovable-uploads/f4bd3fd8-3464-4cf8-832b-4aa31b74442c.png" 
+                    alt="Animal Feed Solutions" 
+                    className="w-full h-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
+                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
+                    <h3 className="font-bold text-xl text-white">ANIMAL FEED SOLUTIONS</h3>
+                  </div>
+                </div>
+                <div className="service-card-body">
+                  <p className="font-semibold mb-2">NUTRITIONAL FEED PRODUCTS:</p>
+                  <p className="text-sm mb-4">We produce high-quality, plant-based animal feed designed to support healthier livestock and sustainable farming practices.</p>
+                  <p className="font-semibold mb-2">CUSTOMIZED FEED FORMULATIONS:</p>
+                  <p className="text-sm mb-4">Tailored feed solutions for specific livestock needs, focusing on nutritional balance and cost efficiency.</p>
+                  <p className="font-semibold mb-2">SUSTAINABILITY COMMITMENT:</p>
+                  <p className="text-sm">Utilizing byproducts from our manufacturing processes to minimize waste and create eco-friendly feed options.</p>
+                </div>
+                <div className="service-card-footer">
+                  <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
+                </div>
               </div>
             </div>
-            <div className="service-card-body">
-              <p className="font-semibold mb-3">VEGAN HIGH-PROTEIN NUT BUTTER</p>
-              <p className="text-sm mb-4">Crafted with premium ingredients like almonds, cashews, pea protein, and chocolate liquor, our nut butter offers 14g of plant protein per 40g serving. It's rich, indulgent, and perfect for health-conscious consumers.</p>
-              <p className="font-semibold mb-2">Key Features:</p>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  High protein, low sugar
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Made with sustainable and ethically sourced ingredients
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Available in unique flavors
-                </li>
-              </ul>
-            </div>
-            <div className="service-card-footer">
-              <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
-            </div>
-          </div>
+          </TabsContent>
           
-          <div className="service-card">
-            <div className="h-48 bg-gray-300 relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1570168986600-7b181e4a8ab0?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="True Ceylon Cinnamon" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">TRUE CEYLON CINNAMON</h3>
+          <TabsContent value="services">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+              <div className="service-card">
+                <div className="service-card-header">
+                  <h3 className="font-bold text-xl">SUSTAINABLE AGRICULTURE SOLUTIONS</h3>
+                </div>
+                <div className="service-card-body">
+                  <ul className="space-y-4">
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      <span><strong>Farm Partnerships:</strong> We collaborate with small-scale farmers, providing them with the tools, training, and resources needed to implement sustainable farming practices.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      <span><strong>Supply Chain Transparency:</strong> Our end-to-end traceability system ensures that every product meets the highest standards of quality and ethics.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      <span><strong>Eco-Friendly Packaging:</strong> Dedicated to reducing waste, we use biodegradable, recyclable, and reusable packaging across our product lines.</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              
+              <div className="service-card">
+                <div className="service-card-header">
+                  <h3 className="font-bold text-xl">CUSTOM FOOD PRODUCT DEVELOPMENT</h3>
+                </div>
+                <div className="service-card-body">
+                  <p className="mb-4">TAILORED SOLUTIONS FOR BUSINESSES SEEKING TO DEVELOP PLANT-BASED OR HEALTH-FOCUSED PRODUCTS UNDER THEIR OWN BRAND. OUR SERVICES INCLUDE:</p>
+                  <ul className="space-y-2">
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Ingredient sourcing
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Recipe formulation
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Packaging design and branding support
+                    </li>
+                    <li className="flex items-center">
+                      <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
+                      </svg>
+                      Manufacturing and distribution
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
-            <div className="service-card-body">
-              <p className="font-semibold mb-3">AUTHENTIC TRUE CEYLON CINNAMON</p>
-              <p className="text-sm mb-4">Sourced directly from sustainable farms in Sri Lanka.</p>
-              <p className="font-semibold mb-2">Product Range:</p>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Powdered Cinnamon for culinary and medicinal uses
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Cinnamon sticks for teas, desserts, and aromatics
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Bulk and retail packaging available
-                </li>
-              </ul>
-            </div>
-            <div className="service-card-footer">
-              <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
-            </div>
-          </div>
-          
-          <div className="service-card">
-            <div className="h-48 bg-gray-300 relative overflow-hidden">
-              <img 
-                src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
-                alt="Animal Feed Solutions" 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-sourcing-green bg-opacity-20"></div>
-              <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent">
-                <h3 className="font-bold text-xl text-white">ANIMAL FEED SOLUTIONS</h3>
-              </div>
-            </div>
-            <div className="service-card-body">
-              <p className="font-semibold mb-2">NUTRITIONAL FEED PRODUCTS:</p>
-              <p className="text-sm mb-4">We produce high-quality, plant-based animal feed designed to support healthier livestock and sustainable farming practices.</p>
-              <p className="font-semibold mb-2">CUSTOMIZED FEED FORMULATIONS:</p>
-              <p className="text-sm mb-4">Tailored feed solutions for specific livestock needs, focusing on nutritional balance and cost efficiency.</p>
-              <p className="font-semibold mb-2">SUSTAINABILITY COMMITMENT:</p>
-              <p className="text-sm">Utilizing byproducts from our manufacturing processes to minimize waste and create eco-friendly feed options.</p>
-            </div>
-            <div className="service-card-footer">
-              <Button className="w-full bg-sourcing-orange hover:bg-sourcing-orange-light">Learn More</Button>
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div className="service-card">
-            <div className="service-card-header">
-              <h3 className="font-bold text-xl">SUSTAINABLE AGRICULTURE SOLUTIONS</h3>
-            </div>
-            <div className="service-card-body">
-              <ul className="space-y-4">
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  <span><strong>Farm Partnerships:</strong> We collaborate with small-scale farmers, providing them with the tools, training, and resources needed to implement sustainable farming practices.</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  <span><strong>Supply Chain Transparency:</strong> Our end-to-end traceability system ensures that every product meets the highest standards of quality and ethics.</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="w-5 h-5 mr-2 mt-1 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  <span><strong>Eco-Friendly Packaging:</strong> Dedicated to reducing waste, we use biodegradable, recyclable, and reusable packaging across our product lines.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-          <div className="service-card">
-            <div className="service-card-header">
-              <h3 className="font-bold text-xl">CUSTOM FOOD PRODUCT DEVELOPMENT</h3>
-            </div>
-            <div className="service-card-body">
-              <p className="mb-4">TAILORED SOLUTIONS FOR BUSINESSES SEEKING TO DEVELOP PLANT-BASED OR HEALTH-FOCUSED PRODUCTS UNDER THEIR OWN BRAND. OUR SERVICES INCLUDE:</p>
-              <ul className="space-y-2">
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Ingredient sourcing
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Recipe formulation
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Packaging design and branding support
-                </li>
-                <li className="flex items-center">
-                  <svg className="w-5 h-5 mr-2 text-sourcing-green" fill="currentColor" viewBox="0 0 20 20">
-                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                  </svg>
-                  Manufacturing and distribution
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
+          </TabsContent>
+        </Tabs>
         
         <h2 className="section-heading mt-16">SPECIALIST SERVICES</h2>
         
