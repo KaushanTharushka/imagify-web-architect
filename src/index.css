@@ -1,3 +1,4 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -154,7 +155,11 @@
   .section-heading {
     @apply text-3xl font-bold mb-8 text-center text-sourcing-green;
   }
-
+  
+  .text-gold {
+    @apply text-yellow-500;
+  }
+  
   /* Animations */
   .fade-in {
     @apply animate-fade-in;
