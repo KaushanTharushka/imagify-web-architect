@@ -6,7 +6,7 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from '@/components/ui/accordion';
-import { Sprout, Globe, Award, BarChart3 } from 'lucide-react';
+import { Sprout, Globe, Award, BarChart3, CheckCircle } from 'lucide-react';
 
 const SolutionsSection: React.FC = () => {
   return (
@@ -84,45 +84,49 @@ const SolutionsSection: React.FC = () => {
           </div>
         </div>
 
-        {/* Redesigned CLIENT SUCCESS section based on the example */}
+        {/* Redesigned CLIENT SUCCESS section with more user-friendly approach */}
         <div className="mb-12">
           <h2 className="section-heading">CLIENT SUCCESS</h2>
           
-          <div className="relative">
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -mt-6 lg:-mt-8 z-10">
-              <div className="bg-gray-900 text-white rounded-full p-4 lg:p-6 shadow-xl">
-                <h3 className="text-lg lg:text-xl font-bold text-center">CLIENT<br />SUCCESS</h3>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 pt-12">
-              <div className="border-2 border-sourcing-green rounded-3xl p-6 bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+            <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="h-3 bg-sourcing-green"></div>
+              <div className="p-6">
                 <div className="flex justify-center mb-4">
-                  <Globe className="h-12 w-12 text-sourcing-green" />
+                  <Globe className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Global Sourcing</h3>
                 <p className="text-gray-600 text-center">Efficiently connecting businesses with reliable, cost-effective suppliers worldwide.</p>
               </div>
-              
-              <div className="border-2 border-sourcing-green rounded-3xl p-6 bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            </div>
+            
+            <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="h-3 bg-sourcing-green"></div>
+              <div className="p-6">
                 <div className="flex justify-center mb-4">
-                  <Sprout className="h-12 w-12 text-sourcing-green" />
+                  <Sprout className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Agro Products</h3>
                 <p className="text-gray-600 text-center">Exporting premium products, such as True Ceylon Cinnamon, through ethical sourcing practices.</p>
               </div>
-              
-              <div className="border-2 border-sourcing-green rounded-3xl p-6 bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            </div>
+            
+            <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="h-3 bg-sourcing-green"></div>
+              <div className="p-6">
                 <div className="flex justify-center mb-4">
-                  <Award className="h-12 w-12 text-sourcing-green" />
+                  <Award className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Branding</h3>
                 <p className="text-gray-600 text-center">Empowering businesses and professionals to establish themselves as thought leaders in their industries.</p>
               </div>
-              
-              <div className="border-2 border-sourcing-green rounded-3xl p-6 bg-white shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1">
+            </div>
+            
+            <div className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
+              <div className="h-3 bg-sourcing-green"></div>
+              <div className="p-6">
                 <div className="flex justify-center mb-4">
-                  <BarChart3 className="h-12 w-12 text-sourcing-green" />
+                  <BarChart3 className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
                 </div>
                 <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Business & Supply Chain Consultancy</h3>
                 <p className="text-gray-600 text-center">Designing and implementing optimized workflows, Agile methodologies, and strategic plans.</p>
@@ -131,27 +135,45 @@ const SolutionsSection: React.FC = () => {
           </div>
         </div>
         
-        {/* Added OUR SPECIALTY section */}
-        <div className="mb-12">
-          <h2 className="section-heading">OUR SPECIALTY</h2>
+        {/* Redesigned OUR SPECIALTY section with user-friendly display */}
+        <div className="mb-12 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8">
+          <h2 className="section-heading mb-10">OUR SPECIALTY</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-sourcing-green shadow-md">
-              <h3 className="font-medium text-lg mb-3 text-sourcing-green">Expertise from over a decade of leadership in operations and supply chains</h3>
-              <div className="h-1 w-16 bg-sourcing-orange mb-4"></div>
-              <p className="text-gray-600">Our seasoned team brings valuable insights from years of industry experience.</p>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Expertise from over a decade of leadership in operations and supply chains</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">Our seasoned team brings valuable insights from years of industry experience.</p>
+              </div>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-sourcing-green shadow-md">
-              <h3 className="font-medium text-lg mb-3 text-sourcing-green">Proven track record of enhancing productivity and revenue growth for global clients</h3>
-              <div className="h-1 w-16 bg-sourcing-orange mb-4"></div>
-              <p className="text-gray-600">We've consistently delivered measurable results across diverse markets and industries.</p>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Proven track record of enhancing productivity and revenue growth for global clients</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">We've consistently delivered measurable results across diverse markets.</p>
+              </div>
             </div>
             
-            <div className="bg-gray-50 p-6 rounded-xl border-t-4 border-sourcing-green shadow-md">
-              <h3 className="font-medium text-lg mb-3 text-sourcing-green">Commitment to ethical practices and sustainable growth</h3>
-              <div className="h-1 w-16 bg-sourcing-orange mb-4"></div>
-              <p className="text-gray-600">We believe in building lasting partnerships founded on integrity and environmental responsibility.</p>
+            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105">
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Commitment to ethical practices and sustainable growth</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">We believe in building lasting partnerships founded on integrity and environmental responsibility.</p>
+              </div>
             </div>
           </div>
         </div>

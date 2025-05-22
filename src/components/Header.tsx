@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu } from 'lucide-react';
 
@@ -27,7 +26,7 @@ const Header: React.FC = () => {
         <div className="flex items-center mb-4 md:mb-0">
           <div className="mr-2">
             <img 
-              src="/lovable-uploads/d80175a3-0256-4e4b-b915-a6bdc9357e27.png" 
+              src="/lovable-uploads/91603dcd-d955-45bb-930c-87699f083e9b.png" 
               alt="Revive Agro Logo" 
               className="h-12 w-auto"
             />
@@ -39,9 +38,9 @@ const Header: React.FC = () => {
         <div className="md:hidden">
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="h-10 w-10">
+              <button className="h-10 w-10 flex items-center justify-center rounded-md">
                 <Menu className="h-6 w-6" />
-              </Button>
+              </button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px]">
               <nav className="flex flex-col space-y-4 mt-8">
@@ -50,7 +49,6 @@ const Header: React.FC = () => {
                 <a href="#solutions" className="text-sourcing-text hover:text-sourcing-green transition" onClick={() => setIsOpen(false)}>Solutions</a>
                 <a href="#process" className="text-sourcing-text hover:text-sourcing-green transition" onClick={() => setIsOpen(false)}>Process</a>
                 <a href="#contact" className="text-sourcing-text hover:text-sourcing-green transition" onClick={() => setIsOpen(false)}>Contact</a>
-                <Button className="w-full bg-sourcing-green hover:bg-sourcing-green-light">Get a Quote</Button>
               </nav>
             </SheetContent>
           </Sheet>
@@ -66,7 +64,6 @@ const Header: React.FC = () => {
             <li><a href="#contact" className="text-sourcing-text hover:text-sourcing-green transition">Contact</a></li>
           </ul>
         </nav>
-        <Button className="hidden md:block ml-6 bg-sourcing-green hover:bg-sourcing-green-light">Get a Quote</Button>
       </div>
     </header>
   );
