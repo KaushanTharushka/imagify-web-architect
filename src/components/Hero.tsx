@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero: React.FC = () => {
@@ -44,23 +43,6 @@ const Hero: React.FC = () => {
           >
             Global Sourcing | Agro Products | Business & Supply Chain Consultancy | Branding
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4"
-          >
-            <Button 
-              className="bg-white text-sourcing-green hover:bg-gray-100 transform transition-transform hover:scale-105"
-            >
-              Learn More
-            </Button>
-            <Button 
-              className="bg-sourcing-orange hover:bg-sourcing-orange-light transform transition-transform hover:scale-105"
-            >
-              Our Solutions
-            </Button>
-          </motion.div>
         </div>
       </div>
     </section>
