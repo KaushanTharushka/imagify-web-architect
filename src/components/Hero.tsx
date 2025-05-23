@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const Hero: React.FC = () => {
@@ -44,22 +43,18 @@ const Hero: React.FC = () => {
           >
             Global Sourcing | Agro Products | Business & Supply Chain Consultancy | Branding
           </motion.p>
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+          
+          <motion.div
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="flex flex-wrap justify-center gap-4"
+            className="w-24 h-24 mx-auto mt-8"
           >
-            <Button 
-              className="bg-white text-sourcing-green hover:bg-gray-100 transform transition-transform hover:scale-105"
-            >
-              Learn More
-            </Button>
-            <Button 
-              className="bg-sourcing-orange hover:bg-sourcing-orange-light transform transition-transform hover:scale-105"
-            >
-              Our Solutions
-            </Button>
+            <img
+              src="/lovable-uploads/4dc16359-1c95-4c05-8ccc-cf90396ca76f.png"
+              alt="Revive Agro Logo"
+              className="w-full h-full object-contain"
+            />
           </motion.div>
         </div>
       </div>
