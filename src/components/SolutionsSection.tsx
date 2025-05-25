@@ -1,507 +1,401 @@
 
 import React from 'react';
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from '@/components/ui/accordion';
-import { Sprout, Globe, Award, BarChart3, CheckCircle, Star, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { 
+  Globe, 
+  Sprout, 
+  Award, 
+  BarChart3, 
+  CheckCircle, 
+  Star, 
+  TrendingUp, 
+  Shield,
+  ArrowRight,
+  Zap,
+  Target,
+  Users
+} from 'lucide-react';
 
 const SolutionsSection: React.FC = () => {
+  const offerItems = [
+    {
+      icon: Target,
+      title: "Supplier Excellence",
+      description: "Supplier identification and evaluation tailored to client needs"
+    },
+    {
+      icon: Zap,
+      title: "Smart Negotiations",
+      description: "Contract negotiation to secure favourable terms and pricing"
+    },
+    {
+      icon: Globe,
+      title: "Logistics Integration",
+      description: "Integrated logistics management to streamline the procurement process"
+    },
+    {
+      icon: Shield,
+      title: "Risk Management",
+      description: "Risk assessment and compliance monitoring to meet international standards"
+    }
+  ];
+
+  const industries = [
+    { name: "Retail & Consumer Goods", icon: "🛍️" },
+    { name: "Organic & Sustainable Foods", icon: "🌱" },
+    { name: "Fashion & Apparel", icon: "👕" }
+  ];
+
+  const clientSuccessItems = [
+    {
+      icon: Globe,
+      title: "Global Sourcing",
+      description: "Efficiently connecting businesses with reliable, cost-effective suppliers worldwide.",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Sprout,
+      title: "Agro Products",
+      description: "Exporting premium products, such as True Ceylon Cinnamon, through ethical sourcing practices.",
+      gradient: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Award,
+      title: "Branding",
+      description: "Empowering businesses and professionals to establish themselves as thought leaders in their industries.",
+      gradient: "from-purple-500 to-violet-500"
+    },
+    {
+      icon: BarChart3,
+      title: "Business & Supply Chain Consultancy",
+      description: "Designing and implementing optimized workflows, Agile methodologies, and strategic plans.",
+      gradient: "from-orange-500 to-red-500"
+    }
+  ];
+
   return (
-    <section id="solutions" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="section-heading">GLOBAL SOURCING SOLUTIONS</h2>
+    <section id="solutions" className="py-20 bg-white relative overflow-hidden">
+      {/* Animated Background */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <motion.div
+          className="absolute top-20 right-10 w-64 h-64 bg-gradient-to-r from-sourcing-green/5 to-sourcing-orange/5 rounded-full"
+          animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+        />
+        <motion.div
+          className="absolute bottom-20 left-10 w-48 h-48 bg-gradient-to-r from-sourcing-orange/5 to-sourcing-green/5 rounded-full"
+          animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+          transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+        />
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* GLOBAL SOURCING SOLUTIONS */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sourcing-green/10 to-sourcing-orange/10 rounded-full mb-6"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Globe className="w-5 h-5 text-sourcing-green mr-2" />
+            <span className="text-sourcing-green font-medium">Our Solutions</span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+              GLOBAL SOURCING SOLUTIONS
+            </span>
+          </h2>
+        </motion.div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h3 className="font-bold text-2xl mb-4 text-sourcing-green">What We Offer:</h3>
-            <div className="space-y-3">
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Supplier identification and evaluation tailored to client needs</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Contract negotiation to secure favourable terms and pricing</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Integrated logistics management to streamline the procurement process</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Risk assessment and compliance monitoring to meet international standards</span>
-              </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold mb-8 text-sourcing-green">What We Offer:</h3>
+            <div className="space-y-6">
+              {offerItems.map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ x: 10, scale: 1.02 }}
+                  className="flex items-start p-6 bg-gradient-to-r from-white to-gray-50 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer"
+                >
+                  <div className="p-3 bg-gradient-to-r from-sourcing-green to-sourcing-orange rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-sourcing-green transition-colors">
+                      {item.title}
+                    </h4>
+                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
-          </div>
+          </motion.div>
           
-          <div>
-            <h3 className="font-bold text-2xl mb-4 text-sourcing-green">Key Industries Served:</h3>
-            <div className="grid grid-cols-1 gap-3">
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Retail and consumer goods</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Organic and sustainable food products</span>
-              </div>
-              <div className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Fashion and apparel</span>
-              </div>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold mb-8 text-sourcing-green">Key Industries Served:</h3>
+            <div className="space-y-4 mb-8">
+              {industries.map((industry, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ scale: 1.05 }}
+                  className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100"
+                >
+                  <span className="text-2xl mr-4">{industry.icon}</span>
+                  <span className="font-medium text-gray-800">{industry.name}</span>
+                </motion.div>
+              ))}
             </div>
-          </div>
-        </div>
-        
-        <div className="bg-gray-100 p-6 md:p-10 rounded-xl mb-12">
-          <h3 className="font-bold text-2xl mb-4 text-sourcing-green">Case Study:</h3>
-          <p className="mb-6">For a European retailer, sourced a new supplier network that reduced procurement costs by 20% and improved lead time by 15%.</p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="text-center">
-              <div className="inline-block rounded-full p-4 bg-sourcing-green text-white">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z"></path>
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd"></path>
-                </svg>
+
+            {/* Case Study */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-gradient-to-br from-sourcing-green via-sourcing-green-light to-sourcing-green p-8 rounded-2xl text-white relative overflow-hidden"
+            >
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+              <h4 className="text-2xl font-bold mb-4">Success Story</h4>
+              <p className="mb-6 text-white/90 leading-relaxed">
+                For a European retailer, we sourced a new supplier network that delivered outstanding results:
+              </p>
+              
+              <div className="grid grid-cols-2 gap-6">
+                <motion.div 
+                  className="text-center"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="text-4xl font-bold mb-2 text-sourcing-orange">20%</div>
+                  <div className="text-sm text-white/80">Cost Reduction</div>
+                </motion.div>
+                <motion.div 
+                  className="text-center"
+                  whileHover={{ scale: 1.1 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="text-4xl font-bold mb-2 text-sourcing-orange">15%</div>
+                  <div className="text-sm text-white/80">Lead Time Improvement</div>
+                </motion.div>
               </div>
-              <p className="font-bold text-2xl mt-2 text-sourcing-green">20%</p>
-              <p className="text-sm text-gray-600">COST REDUCTION</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="inline-block rounded-full p-4 bg-sourcing-orange text-white">
-                <svg className="w-12 h-12" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
-                </svg>
-              </div>
-              <p className="font-bold text-2xl mt-2 text-sourcing-orange">15%</p>
-              <p className="text-sm text-gray-600">LEAD TIME IMPROVEMENT</p>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
 
         {/* CLIENT SUCCESS section */}
-        <div className="mb-12">
-          <h2 className="section-heading">CLIENT SUCCESS</h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
-            <motion.div 
-              className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              whileHover={{ scale: 1.03 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-3 bg-sourcing-green"></div>
-              <div className="p-6">
-                <div className="flex justify-center mb-4">
-                  <Globe className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
-                </div>
-                <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Global Sourcing</h3>
-                <p className="text-gray-600 text-center">Efficiently connecting businesses with reliable, cost-effective suppliers worldwide.</p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              whileHover={{ scale: 1.03 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-3 bg-sourcing-green"></div>
-              <div className="p-6">
-                <div className="flex justify-center mb-4">
-                  <Sprout className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
-                </div>
-                <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Agro Products</h3>
-                <p className="text-gray-600 text-center">Exporting premium products, such as True Ceylon Cinnamon, through ethical sourcing practices.</p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              whileHover={{ scale: 1.03 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-3 bg-sourcing-green"></div>
-              <div className="p-6">
-                <div className="flex justify-center mb-4">
-                  <Award className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
-                </div>
-                <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Branding</h3>
-                <p className="text-gray-600 text-center">Empowering businesses and professionals to establish themselves as thought leaders in their industries.</p>
-              </div>
-            </motion.div>
-            
-            <motion.div 
-              className="group bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
-              whileHover={{ scale: 1.03 }}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              viewport={{ once: true }}
-            >
-              <div className="h-3 bg-sourcing-green"></div>
-              <div className="p-6">
-                <div className="flex justify-center mb-4">
-                  <BarChart3 className="h-14 w-14 text-sourcing-green group-hover:text-sourcing-orange transition-colors duration-300" />
-                </div>
-                <h3 className="font-bold text-xl mb-3 text-center text-sourcing-green">Business & Supply Chain Consultancy</h3>
-                <p className="text-gray-600 text-center">Designing and implementing optimized workflows, Agile methodologies, and strategic plans.</p>
-              </div>
-            </motion.div>
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-16"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+                CLIENT SUCCESS
+              </span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Delivering exceptional results across diverse industries and markets
+            </p>
           </div>
-        </div>
-        
-        {/* Redesigned OUR SPECIALTY section with creative and user-friendly approach */}
-        <div className="mb-12">
-          <h2 className="section-heading">OUR SPECIALTY</h2>
           
-          <div className="relative bg-gradient-to-br from-sourcing-green via-sourcing-green-light to-sourcing-green-dark rounded-3xl p-8 md:p-12 overflow-hidden">
-            {/* Animated background elements */}
-            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
-              <motion.div 
-                className="absolute -top-10 -right-10 w-40 h-40 bg-sourcing-orange rounded-full opacity-20"
-                animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
-                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-              />
-              <motion.div 
-                className="absolute -bottom-10 -left-10 w-32 h-32 bg-white rounded-full opacity-10"
-                animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
-                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {clientSuccessItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.03 }}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              >
+                <div className={`h-2 bg-gradient-to-r ${item.gradient}`}></div>
+                <div className="p-8">
+                  <div className="flex justify-center mb-6">
+                    <div className={`p-4 rounded-2xl bg-gradient-to-r ${item.gradient}`}>
+                      <item.icon className="h-8 w-8 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="font-bold text-xl mb-4 text-center text-gray-900 group-hover:text-sourcing-green transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-center leading-relaxed">{item.description}</p>
+                  <motion.div
+                    className="flex items-center justify-center mt-6 text-sourcing-green opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                    whileHover={{ x: 5 }}
+                  >
+                    <span className="font-medium mr-2">Learn More</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+        
+        {/* AGRO BUSINESS section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto"
+        >
+          <div className="bg-gradient-to-r from-black via-gray-900 to-black rounded-3xl overflow-hidden shadow-2xl relative">
+            {/* Background Pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div className="absolute inset-0" style={{ 
+                backgroundImage: 'radial-gradient(circle at 25% 25%, white 2px, transparent 2px)',
+                backgroundSize: '50px 50px'
+              }}></div>
             </div>
             
-            <div className="relative z-10">
-              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <motion.div 
-                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6 }}
+            <div className="relative z-10 p-8 md:p-12">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <motion.div
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.8 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="bg-sourcing-orange rounded-full p-3 mr-4"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <Star className="h-8 w-8 text-white" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-xl text-white mb-2">Decade of Excellence</h3>
-                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
-                    </div>
+                  <div className="flex items-center mb-6">
+                    <img 
+                      src="/lovable-uploads/91603dcd-d955-45bb-930c-87699f083e9b.png" 
+                      alt="Revive Agro Logo" 
+                      className="h-12 w-auto mr-4"
+                    />
+                    <h2 className="text-4xl font-bold text-gold">AGRO BUSINESS</h2>
                   </div>
-                  <p className="text-white/90 leading-relaxed">
-                    Expertise from over a decade of leadership in operations and supply chains, bringing seasoned insights to every partnership.
+                  <p className="text-white text-lg mb-6 leading-relaxed">
+                    Revive Agro, a trusted name in sourcing premium agro products, with a strong emphasis on sustainability and quality.
                   </p>
-                  <motion.div 
-                    className="mt-4 flex items-center text-sourcing-orange font-medium"
-                    whileHover={{ x: 5 }}
+                  <div className="mb-8">
+                    <h3 className="text-gold text-2xl font-semibold mb-4">Flagship Product:</h3>
+                    <p className="text-white/90 leading-relaxed">
+                      True Ceylon Cinnamon under the Cinnatera brand. Known for its unmatched aroma, flavor, and medicinal properties.
+                    </p>
+                  </div>
+                  <motion.button 
+                    className="px-8 py-4 bg-gradient-to-r from-sourcing-orange to-yellow-500 text-white rounded-full font-medium hover:shadow-lg transition-all duration-300"
+                    whileHover={{ scale: 1.05, y: -2 }}
+                    whileTap={{ scale: 0.95 }}
                   >
-                    <span className="mr-2">Learn More</span>
-                    <motion.div
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      →
-                    </motion.div>
-                  </motion.div>
+                    Explore Our Products
+                  </motion.button>
                 </motion.div>
                 
-                <motion.div 
-                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 30 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: 0.2 }}
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
                   viewport={{ once: true }}
+                  className="relative"
                 >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="bg-sourcing-orange rounded-full p-3 mr-4"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <TrendingUp className="h-8 w-8 text-white" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-xl text-white mb-2">Proven Results</h3>
-                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
-                    </div>
-                  </div>
-                  <p className="text-white/90 leading-relaxed">
-                    Proven track record of enhancing productivity and revenue growth for global clients with measurable outcomes.
-                  </p>
-                  <motion.div 
-                    className="mt-4 flex items-center text-sourcing-orange font-medium"
-                    whileHover={{ x: 5 }}
+                  <motion.div
+                    animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
+                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                    className="relative z-10"
                   >
-                    <span className="mr-2">View Case Studies</span>
-                    <motion.div
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      →
-                    </motion.div>
+                    <img 
+                      src="/lovable-uploads/5c445bed-2dcc-4189-ba9e-d5290a94ef5e.png" 
+                      alt="Cinnatera Cinnamon Products" 
+                      className="max-h-[400px] object-contain mx-auto"
+                    />
                   </motion.div>
+                  <motion.div
+                    className="absolute -bottom-8 -right-8 w-32 h-32 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full blur-2xl opacity-30"
+                    animate={{ scale: [1, 1.3, 1] }}
+                    transition={{ duration: 4, repeat: Infinity }}
+                  />
                 </motion.div>
-                
-                <motion.div 
-                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  initial={{ opacity: 0, y: 30 }}
+              </div>
+              
+              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.4 }}
                   viewport={{ once: true }}
                 >
-                  <div className="flex items-center mb-4">
-                    <motion.div 
-                      className="bg-sourcing-orange rounded-full p-3 mr-4"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                      <Shield className="h-8 w-8 text-white" />
-                    </motion.div>
-                    <div className="flex-1">
-                      <h3 className="font-bold text-xl text-white mb-2">Ethical Foundation</h3>
-                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
-                    </div>
+                  <h4 className="text-gold text-xl font-semibold mb-6">Product Range:</h4>
+                  <div className="space-y-4">
+                    {[
+                      "True Ceylon Cinnamon (sticks, powder, oil)",
+                      "Organic spices: black pepper, turmeric, cloves",
+                      "Coconut products: organic virgin coconut oil, desiccated coconut"
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center text-white"
+                      >
+                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-3"></div>
+                        <span>{item}</span>
+                      </motion.div>
+                    ))}
                   </div>
-                  <p className="text-white/90 leading-relaxed">
-                    Commitment to ethical practices and sustainable growth, building lasting partnerships founded on integrity.
-                  </p>
-                  <motion.div 
-                    className="mt-4 flex items-center text-sourcing-orange font-medium"
-                    whileHover={{ x: 5 }}
-                  >
-                    <span className="mr-2">Our Values</span>
-                    <motion.div
-                      animate={{ x: [0, 5, 0] }}
-                      transition={{ duration: 1.5, repeat: Infinity }}
-                    >
-                      →
-                    </motion.div>
-                  </motion.div>
+                </motion.div>
+                
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <h4 className="text-gold text-xl font-semibold mb-6">Value Proposition:</h4>
+                  <div className="space-y-4">
+                    {[
+                      "Guaranteed purity with traceable supply chains",
+                      "Ethical partnerships with Sri Lankan farmers and producers",
+                      "Competitive pricing for high-demand global markets"
+                    ].map((item, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }}
+                        viewport={{ once: true }}
+                        className="flex items-center text-white"
+                      >
+                        <CheckCircle className="w-5 h-5 text-sourcing-orange mr-3" />
+                        <span>{item}</span>
+                      </motion.div>
+                    ))}
+                  </div>
                 </motion.div>
               </div>
-              
-              {/* Bottom stats section */}
-              <motion.div 
-                className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-center">
-                  <motion.div 
-                    className="text-4xl font-bold text-white mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity }}
-                  >
-                    10+
-                  </motion.div>
-                  <div className="text-white/80">Years of Experience</div>
-                </div>
-                <div className="text-center">
-                  <motion.div 
-                    className="text-4xl font-bold text-white mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
-                  >
-                    100+
-                  </motion.div>
-                  <div className="text-white/80">Successful Projects</div>
-                </div>
-                <div className="text-center">
-                  <motion.div 
-                    className="text-4xl font-bold text-white mb-2"
-                    animate={{ scale: [1, 1.1, 1] }}
-                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
-                  >
-                    50+
-                  </motion.div>
-                  <div className="text-white/80">Global Partners</div>
-                </div>
-              </motion.div>
             </div>
           </div>
-        </div>
-        
-        {/* AGRO BUSINESS section */}
-        <div className="flex justify-center mb-16">
-          <motion.div 
-            className="max-w-5xl w-full"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <div className="bg-black rounded-2xl overflow-hidden shadow-2xl">
-              <div className="relative">
-                <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-black/70 via-black/50 to-transparent z-10"></div>
-                <div className="p-8 md:p-12 relative z-20">
-                  <div className="flex flex-col md:flex-row items-center justify-between">
-                    <div className="mb-8 md:mb-0 md:w-1/2">
-                      <motion.div 
-                        initial={{ y: 20, opacity: 0 }}
-                        whileInView={{ y: 0, opacity: 1 }}
-                        transition={{ delay: 0.3, duration: 0.5 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="flex items-center mb-6">
-                          <img 
-                            src="/lovable-uploads/91603dcd-d955-45bb-930c-87699f083e9b.png" 
-                            alt="Revive Agro Logo" 
-                            className="h-12 w-auto mr-4"
-                          />
-                          <h2 className="text-4xl font-bold text-gold">AGRO BUSINESS</h2>
-                        </div>
-                        <p className="text-white text-lg mb-6">
-                          Revive Agro, a trusted name in sourcing premium agro products, with a strong emphasis on sustainability and quality.
-                        </p>
-                        <div className="mb-6">
-                          <h3 className="text-gold text-2xl font-semibold mb-4">Flagship Product:</h3>
-                          <p className="text-white">
-                            True Ceylon Cinnamon under the Cinnatera brand. Known for its unmatched aroma, flavor, and medicinal properties.
-                          </p>
-                        </div>
-                        <motion.button 
-                          className="px-6 py-3 bg-sourcing-orange text-white rounded-full font-medium hover:bg-sourcing-orange-light transition-all duration-300"
-                          whileHover={{ scale: 1.05 }}
-                          whileTap={{ scale: 0.95 }}
-                        >
-                          Explore Our Products
-                        </motion.button>
-                      </motion.div>
-                    </div>
-                    <div className="md:w-1/2 flex justify-center">
-                      <motion.div 
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        whileInView={{ scale: 1, opacity: 1 }}
-                        transition={{ type: "spring", stiffness: 100, delay: 0.5 }}
-                        viewport={{ once: true }}
-                        className="relative"
-                      >
-                        <motion.div 
-                          animate={{ 
-                            y: [0, -10, 0], 
-                            rotate: [0, 2, 0] 
-                          }}
-                          transition={{ 
-                            duration: 6, 
-                            ease: "easeInOut", 
-                            repeat: Infinity 
-                          }}
-                        >
-                          <img 
-                            src="/lovable-uploads/5c445bed-2dcc-4189-ba9e-d5290a94ef5e.png" 
-                            alt="Cinnatera Cinnamon Products" 
-                            className="max-h-[400px] object-contain"
-                          />
-                        </motion.div>
-                        <motion.div
-                          className="absolute -bottom-4 -right-4 h-32 w-32 rounded-full bg-gradient-to-r from-sourcing-orange to-yellow-400 blur-xl opacity-40"
-                          animate={{ scale: [1, 1.2, 1] }}
-                          transition={{ duration: 4, repeat: Infinity }}
-                        />
-                      </motion.div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-sourcing-footer-dark p-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <h4 className="text-gold text-xl font-semibold mb-4">Product Range:</h4>
-                    <ul className="space-y-3">
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.6, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>True Ceylon Cinnamon (sticks, powder, oil)</span>
-                      </motion.li>
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.7, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>Organic spices: black pepper, turmeric, cloves</span>
-                      </motion.li>
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.8, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>Coconut products: organic virgin coconut oil, desiccated coconut</span>
-                      </motion.li>
-                    </ul>
-                  </div>
-                  <div>
-                    <h4 className="text-gold text-xl font-semibold mb-4">Value Proposition:</h4>
-                    <ul className="space-y-3">
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 0.9, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>Guaranteed purity with traceable supply chains</span>
-                      </motion.li>
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 1.0, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>Ethical partnerships with Sri Lankan farmers and producers</span>
-                      </motion.li>
-                      <motion.li 
-                        className="flex items-center text-white"
-                        initial={{ x: -20, opacity: 0 }}
-                        whileInView={{ x: 0, opacity: 1 }}
-                        transition={{ delay: 1.1, duration: 0.3 }}
-                        viewport={{ once: true }}
-                      >
-                        <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                        <span>Competitive pricing for high-demand global markets</span>
-                      </motion.li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -1,229 +1,437 @@
 
 import React from 'react';
+import { motion } from 'framer-motion';
+import { 
+  ClipboardList, 
+  Zap, 
+  ArrowRight, 
+  BookOpen, 
+  Users, 
+  Eye, 
+  DollarSign, 
+  ShoppingCart,
+  MapPin,
+  Sparkles,
+  CheckCircle2,
+  TrendingUp,
+  Shield,
+  Lightbulb,
+  Heart,
+  Target,
+  Globe
+} from 'lucide-react';
 
 const ProcessSection: React.FC = () => {
-  return (
-    <section id="process" className="py-16 bg-white">
-      <div className="container mx-auto px-4">
-        <h2 className="section-heading">BUSINESS & SUPPLY CHAIN CONSULTANCY</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Audit</h3>
-            <p className="text-gray-600 text-sm">Conduct in-depth operational assessments to identify inefficiencies</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Optimize</h3>
-            <p className="text-gray-600 text-sm">Apply process re-engineering and technological solutions to streamline workflows</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Implement</h3>
-            <p className="text-gray-600 text-sm">Roll out tailored strategies for sustainable growth</p>
-          </div>
-          
-          <div className="text-center p-6 bg-white rounded-lg shadow-md">
-            <div className="rounded-full bg-sourcing-green p-4 inline-flex items-center justify-center mb-4">
-              <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-              </svg>
-            </div>
-            <h3 className="font-bold text-lg mb-2">Train</h3>
-            <p className="text-gray-600 text-sm">Provide tools and training to empower teams for long-term success</p>
-          </div>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-          <div>
-            <h3 className="font-bold text-2xl mb-6 text-sourcing-green">Key Services</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Supply chain strategy and design</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Agile project management and transformation</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>Demand planning and sales forecasting</span>
-              </li>
-              <li className="flex items-center">
-                <div className="w-2 h-2 rounded-full bg-sourcing-orange mr-2"></div>
-                <span>ERP system selection and integration</span>
-              </li>
-            </ul>
-          </div>
-          
-          <div className="bg-gray-50 p-6 rounded-lg">
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <p className="font-medium">Reduced lead times by 25% for an organic product exporter</p>
-                <div className="h-2 w-2 rounded-full bg-sourcing-green"></div>
-              </div>
-              <div className="flex items-center justify-between">
-                <p className="font-medium">Improved manufacturing productivity by 30% for a fashion brand</p>
-                <div className="h-2 w-2 rounded-full bg-sourcing-green"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <h2 className="section-heading">WHY CHOOSE REVIVE AGRO?</h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-12">
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-bold text-lg mb-3 text-sourcing-green">Commitment to Sustainability</h3>
-            <p className="text-sm text-gray-600">Every product we offer is designed with environmental impact in mind, from sourcing to packaging.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-bold text-lg mb-3 text-sourcing-green">Uncompromising Quality</h3>
-            <p className="text-sm text-gray-600">We use only the finest natural ingredients, ensuring our customers enjoy premium products that align with their health goals.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-bold text-lg mb-3 text-sourcing-green">Innovation</h3>
-            <p className="text-sm text-gray-600">By continuously developing new products and flavors, we stay ahead of market trends to meet consumer demand.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-bold text-lg mb-3 text-sourcing-green">Transparency</h3>
-            <p className="text-sm text-gray-600">Our traceability systems and ethical practices build trust with consumers and partners alike.</p>
-          </div>
-          
-          <div className="bg-white p-6 rounded-lg shadow-md">
-            <h3 className="font-bold text-lg mb-3 text-sourcing-green">Holistic Approach</h3>
-            <p className="text-sm text-gray-600">We don't just sell products—we inspire lifestyle changes through education, community support, and sustainable practices.</p>
-          </div>
-        </div>
+  const processSteps = [
+    {
+      icon: ClipboardList,
+      title: "Audit",
+      description: "Conduct in-depth operational assessments to identify inefficiencies",
+      color: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Zap,
+      title: "Optimize", 
+      description: "Apply process re-engineering and technological solutions to streamline workflows",
+      color: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: ArrowRight,
+      title: "Implement",
+      description: "Roll out tailored strategies for sustainable growth",
+      color: "from-purple-500 to-violet-500"
+    },
+    {
+      icon: BookOpen,
+      title: "Train",
+      description: "Provide tools and training to empower teams for long-term success",
+      color: "from-orange-500 to-red-500"
+    }
+  ];
 
-        <h2 className="section-heading">HOW WE WORK</h2>
+  const keyServices = [
+    "Supply chain strategy and design",
+    "Agile project management and transformation", 
+    "Demand planning and sales forecasting",
+    "ERP system selection and integration"
+  ];
+
+  const whyChooseItems = [
+    {
+      icon: Heart,
+      title: "Commitment to Sustainability",
+      description: "Every product we offer is designed with environmental impact in mind, from sourcing to packaging.",
+      gradient: "from-green-500 to-emerald-500"
+    },
+    {
+      icon: Shield,
+      title: "Uncompromising Quality",
+      description: "We use only the finest natural ingredients, ensuring our customers enjoy premium products that align with their health goals.",
+      gradient: "from-blue-500 to-cyan-500"
+    },
+    {
+      icon: Lightbulb,
+      title: "Innovation",
+      description: "By continuously developing new products and flavors, we stay ahead of market trends to meet consumer demand.",
+      gradient: "from-purple-500 to-violet-500"
+    },
+    {
+      icon: Eye,
+      title: "Transparency",
+      description: "Our traceability systems and ethical practices build trust with consumers and partners alike.",
+      gradient: "from-yellow-500 to-orange-500"
+    },
+    {
+      icon: Target,
+      title: "Holistic Approach",
+      description: "We don't just sell products—we inspire lifestyle changes through education, community support, and sustainable practices.",
+      gradient: "from-pink-500 to-rose-500"
+    }
+  ];
+
+  const workflowSteps = [
+    {
+      number: "1",
+      title: "Consultation",
+      description: "Understanding client challenges and goals"
+    },
+    {
+      number: "2", 
+      title: "Strategy Development",
+      description: "Creating tailored solutions"
+    },
+    {
+      number: "3",
+      title: "Implementation", 
+      description: "Rolling out changes with full support"
+    },
+    {
+      number: "4",
+      title: "Follow-up",
+      description: "Monitoring and refining strategies for sustained success"
+    }
+  ];
+
+  const distributionChannels = [
+    {
+      icon: Eye,
+      title: "Direct-to-Consumer (DTC)",
+      description: "Through our e-commerce platform, we deliver directly to customers worldwide."
+    },
+    {
+      icon: ShoppingCart,
+      title: "Retail",
+      description: "Available at health-focused grocery stores, specialty vegan shops, and online marketplaces."
+    },
+    {
+      icon: DollarSign,
+      title: "Wholesale and B2B",
+      description: "Collaborating with distributors, cafés, gyms, and subscription box services to bring our products to a larger audience."
+    },
+    {
+      icon: MapPin,
+      title: "International Markets",
+      description: "Expanding into Europe, North America, and Asia-Pacific regions, where plant-based products are in high demand."
+    }
+  ];
+
+  return (
+    <section id="process" className="py-20 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+      {/* Animated Background Elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        {[...Array(10)].map((_, i) => (
+          <motion.div
+            key={i}
+            className="absolute w-2 h-2 bg-sourcing-green/8 rounded-full"
+            style={{
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
+            }}
+            animate={{
+              y: [-20, 20, -20],
+              x: [-10, 10, -10],
+              scale: [1, 1.5, 1],
+              opacity: [0.1, 0.4, 0.1]
+            }}
+            transition={{
+              duration: 8 + Math.random() * 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+              delay: i * 1.2
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 relative z-10">
+        {/* BUSINESS & SUPPLY CHAIN CONSULTANCY */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <motion.div
+            className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-sourcing-green/10 to-sourcing-orange/10 rounded-full mb-6"
+            whileHover={{ scale: 1.05 }}
+          >
+            <Sparkles className="w-5 h-5 text-sourcing-green mr-2" />
+            <span className="text-sourcing-green font-medium">Our Process</span>
+          </motion.div>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+              BUSINESS & SUPPLY CHAIN CONSULTANCY
+            </span>
+          </h2>
+        </motion.div>
         
-        <div className="max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
-            <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-sourcing-green text-white flex items-center justify-center text-2xl font-bold">1</div>
-              <div className="mt-2 text-sourcing-green font-bold">Consultation</div>
-              <p className="text-sm text-gray-600">Understanding client challenges and goals</p>
-            </div>
-            <div className="md:flex-grow md:mt-4">
-              <div className="h-1 bg-gray-200 w-full"></div>
-            </div>
-            <div className="flex-shrink-0 mt-4 md:mt-0 md:ml-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-sourcing-green text-white flex items-center justify-center text-2xl font-bold">2</div>
-              <div className="mt-2 text-sourcing-green font-bold">Strategy Development</div>
-              <p className="text-sm text-gray-600">Creating tailored solutions</p>
-            </div>
-          </div>
-          
-          <div className="flex flex-col md:flex-row items-center md:items-start mb-12">
-            <div className="flex-shrink-0 mb-4 md:mb-0 md:mr-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-sourcing-green text-white flex items-center justify-center text-2xl font-bold">3</div>
-              <div className="mt-2 text-sourcing-green font-bold">Implementation</div>
-              <p className="text-sm text-gray-600">Rolling out changes with full support</p>
-            </div>
-            <div className="md:flex-grow md:mt-4">
-              <div className="h-1 bg-gray-200 w-full"></div>
-            </div>
-            <div className="flex-shrink-0 mt-4 md:mt-0 md:ml-8 text-center">
-              <div className="w-16 h-16 rounded-full bg-sourcing-green text-white flex items-center justify-center text-2xl font-bold">4</div>
-              <div className="mt-2 text-sourcing-green font-bold">Follow-up</div>
-              <p className="text-sm text-gray-600">Monitoring and refining strategies for sustained success</p>
-            </div>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+          {processSteps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10, scale: 1.03 }}
+              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+            >
+              <div className={`h-2 bg-gradient-to-r ${step.color}`}></div>
+              <div className="p-8 text-center">
+                <div className="flex justify-center mb-6">
+                  <div className={`p-4 rounded-2xl bg-gradient-to-r ${step.color} group-hover:scale-110 transition-transform duration-300`}>
+                    <step.icon className="w-8 h-8 text-white" />
+                  </div>
+                </div>
+                <h3 className="font-bold text-xl mb-4 text-gray-900 group-hover:text-sourcing-green transition-colors">
+                  {step.title}
+                </h3>
+                <p className="text-gray-600 leading-relaxed">{step.description}</p>
+              </div>
+            </motion.div>
+          ))}
         </div>
         
-        <div className="mt-16">
-          <h2 className="section-heading">OUR MARKET REACH</h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-20">
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h3 className="text-3xl font-bold mb-8 text-sourcing-green">Key Services</h3>
+            <div className="space-y-4">
+              {keyServices.map((service, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  whileHover={{ x: 10 }}
+                  className="flex items-center p-4 bg-white rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 cursor-pointer group"
+                >
+                  <div className="w-3 h-3 rounded-full bg-sourcing-orange mr-4 group-hover:scale-125 transition-transform duration-300"></div>
+                  <span className="font-medium text-gray-800 group-hover:text-sourcing-green transition-colors">{service}</span>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="font-bold text-2xl mb-6 text-sourcing-green">Global Distribution Channels</h3>
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="bg-gradient-to-br from-gray-50 to-white p-8 rounded-2xl shadow-lg border border-gray-100"
+          >
+            <h4 className="text-2xl font-bold mb-6 text-sourcing-green">Success Stories</h4>
+            <div className="space-y-6">
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="flex items-start p-4 bg-white rounded-xl shadow-md border border-gray-100"
+              >
+                <div className="w-3 h-3 rounded-full bg-sourcing-green mt-2 mr-4"></div>
+                <p className="font-medium text-gray-800">Reduced lead times by 25% for an organic product exporter</p>
+              </motion.div>
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="flex items-start p-4 bg-white rounded-xl shadow-md border border-gray-100"
+              >
+                <div className="w-3 h-3 rounded-full bg-sourcing-green mt-2 mr-4"></div>
+                <p className="font-medium text-gray-800">Improved manufacturing productivity by 30% for a fashion brand</p>
+              </motion.div>
+            </div>
+          </motion.div>
+        </div>
+        
+        {/* WHY CHOOSE REVIVE AGRO */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+                WHY CHOOSE REVIVE AGRO?
+              </span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+            {whyChooseItems.map((item, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                whileHover={{ y: -10, scale: 1.03 }}
+                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100"
+              >
+                <div className={`h-2 bg-gradient-to-r ${item.gradient}`}></div>
+                <div className="p-6">
+                  <div className="flex justify-center mb-4">
+                    <div className={`p-3 rounded-xl bg-gradient-to-r ${item.gradient} group-hover:scale-110 transition-transform duration-300`}>
+                      <item.icon className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <h3 className="font-bold text-lg mb-3 text-center text-gray-900 group-hover:text-sourcing-green transition-colors">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 text-center leading-relaxed">{item.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* HOW WE WORK */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="mb-20"
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+                HOW WE WORK
+              </span>
+            </h2>
+          </div>
+          
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {workflowSteps.map((step, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                  className="text-center relative"
+                >
+                  <div className="relative mb-6">
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                      className="w-20 h-20 rounded-full bg-gradient-to-r from-sourcing-green to-sourcing-orange text-white flex items-center justify-center text-3xl font-bold mx-auto shadow-lg"
+                    >
+                      {step.number}
+                    </motion.div>
+                    {index < workflowSteps.length - 1 && (
+                      <div className="hidden lg:block absolute top-10 left-full w-24 h-0.5 bg-gradient-to-r from-sourcing-green to-sourcing-orange"></div>
+                    )}
+                  </div>
+                  <h4 className="font-bold text-xl mb-3 text-sourcing-green">{step.title}</h4>
+                  <p className="text-gray-600 leading-relaxed">{step.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+        
+        {/* OUR MARKET REACH */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+        >
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
+                OUR MARKET REACH
+              </span>
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+            >
+              <h3 className="text-3xl font-bold mb-8 text-sourcing-green">Global Distribution Channels</h3>
               
-              <div className="space-y-4">
-                <div className="flex items-start">
-                  <div className="mr-3 p-2 bg-sourcing-green rounded-full text-white">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
-                      <path fillRule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Direct-to-Consumer (DTC)</h4>
-                    <p className="text-sm text-gray-600">Through our e-commerce platform, we deliver directly to customers worldwide.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="mr-3 p-2 bg-sourcing-green rounded-full text-white">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Retail</h4>
-                    <p className="text-sm text-gray-600">Available at health-focused grocery stores, specialty vegan shops, and online marketplaces.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="mr-3 p-2 bg-sourcing-green rounded-full text-white">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8.433 7.418c.155-.103.346-.196.567-.267v1.698a2.305 2.305 0 01-.567-.267C8.07 8.34 8 8.114 8 8c0-.114.07-.34.433-.582zM11 12.849v-1.698c.22.071.412.164.567.267.364.243.433.468.433.582 0 .114-.07.34-.433.582a2.305 2.305 0 01-.567.267z" />
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-13a1 1 0 10-2 0v.092a4.535 4.535 0 00-1.676.662C6.602 6.234 6 7.009 6 8c0 .99.602 1.765 1.324 2.246.48.32 1.054.545 1.676.662v1.941c-.391-.127-.68-.317-.843-.504a1 1 0 10-1.51 1.31c.562.649 1.413 1.076 2.353 1.253V15a1 1 0 102 0v-.092a4.535 4.535 0 001.676-.662C13.398 13.766 14 12.991 14 12c0-.99-.602-1.765-1.324-2.246A4.535 4.535 0 0011 9.092V7.151c.391.127.68.317.843.504a1 1 0 101.511-1.31c-.563-.649-1.413-1.076-2.354-1.253V5z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">Wholesale and B2B</h4>
-                    <p className="text-sm text-gray-600">Collaborating with distributors, cafés, gyms, and subscription box services to bring our products to a larger audience.</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start">
-                  <div className="mr-3 p-2 bg-sourcing-green rounded-full text-white">
-                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
-                    </svg>
-                  </div>
-                  <div>
-                    <h4 className="font-medium">International Markets</h4>
-                    <p className="text-sm text-gray-600">Expanding into Europe, North America, and Asia-Pacific regions, where plant-based products are in high demand.</p>
-                  </div>
-                </div>
+              <div className="space-y-6">
+                {distributionChannels.map((channel, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    whileHover={{ x: 10, scale: 1.02 }}
+                    className="flex items-start p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group cursor-pointer"
+                  >
+                    <div className="p-3 bg-gradient-to-r from-sourcing-green to-sourcing-orange rounded-xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                      <channel.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg mb-2 text-gray-900 group-hover:text-sourcing-green transition-colors">
+                        {channel.title}
+                      </h4>
+                      <p className="text-gray-600 leading-relaxed">{channel.description}</p>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
-            </div>
+            </motion.div>
             
-            <div className="flex justify-center">
-              <div className="p-6">
-                <svg className="w-32 h-32 text-sourcing-green" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M15 4h-3v5a1 1 0 0 1-2 0V4H7a1 1 0 0 0-1 1v14a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V5a1 1 0 0 0-1-1Zm-3 10a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm0 4a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z"/>
-                  <path d="M9 6h6v2H9z"/>
-                </svg>
-                <div className="mt-4 text-center">
-                  <h3 className="font-bold text-xl text-sourcing-green">REVIVE AGRO</h3>
-                </div>
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="flex justify-center"
+            >
+              <div className="bg-gradient-to-br from-sourcing-green to-sourcing-green-dark p-12 rounded-3xl text-center text-white relative overflow-hidden">
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-4 right-4 w-16 h-16 bg-white/10 rounded-full"
+                />
+                <motion.div
+                  animate={{ scale: [1, 1.1, 1] }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="relative z-10"
+                >
+                  <Globe className="w-24 h-24 mx-auto mb-6 text-sourcing-orange" />
+                  <h3 className="font-bold text-3xl mb-4">REVIVE AGRO</h3>
+                  <p className="text-white/90">Global Reach, Local Impact</p>
+                </motion.div>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
