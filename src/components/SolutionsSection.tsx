@@ -164,6 +164,70 @@ const SolutionsSection: React.FC = () => {
           </div>
         </div>
         
+        {/* Redesigned OUR SPECIALTY section with user-friendly display */}
+        <div className="mb-12 bg-gradient-to-br from-gray-50 to-gray-100 rounded-xl p-8">
+          <h2 className="section-heading mb-10">OUR SPECIALTY</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Expertise from over a decade of leadership in operations and supply chains</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">Our seasoned team brings valuable insights from years of industry experience.</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Proven track record of enhancing productivity and revenue growth for global clients</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">We've consistently delivered measurable results across diverse markets.</p>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300"
+              whileHover={{ y: -5 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+            >
+              <div className="flex items-start mb-4">
+                <div className="bg-sourcing-green rounded-full p-2 mr-3">
+                  <CheckCircle className="h-6 w-6 text-white" />
+                </div>
+                <h3 className="font-medium text-lg text-sourcing-green">Commitment to ethical practices and sustainable growth</h3>
+              </div>
+              <div className="pl-11">
+                <p className="text-gray-600">We believe in building lasting partnerships founded on integrity and environmental responsibility.</p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+        
         {/* Redesigned AGRO BUSINESS section with attractive animations and the uploaded image */}
         <div className="flex justify-center mb-16">
           <motion.div 
