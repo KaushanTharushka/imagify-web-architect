@@ -6,7 +6,7 @@ import {
   AccordionItem, 
   AccordionTrigger 
 } from '@/components/ui/accordion';
-import { Sprout, Globe, Award, BarChart3, CheckCircle } from 'lucide-react';
+import { Sprout, Globe, Award, BarChart3, CheckCircle, Star, TrendingUp, Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const SolutionsSection: React.FC = () => {
@@ -161,6 +161,185 @@ const SolutionsSection: React.FC = () => {
                 <p className="text-gray-600 text-center">Designing and implementing optimized workflows, Agile methodologies, and strategic plans.</p>
               </div>
             </motion.div>
+          </div>
+        </div>
+        
+        {/* Redesigned OUR SPECIALTY section with creative and user-friendly approach */}
+        <div className="mb-12">
+          <h2 className="section-heading">OUR SPECIALTY</h2>
+          
+          <div className="relative bg-gradient-to-br from-sourcing-green via-sourcing-green-light to-sourcing-green-dark rounded-3xl p-8 md:p-12 overflow-hidden">
+            {/* Animated background elements */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden">
+              <motion.div 
+                className="absolute -top-10 -right-10 w-40 h-40 bg-sourcing-orange rounded-full opacity-20"
+                animate={{ scale: [1, 1.2, 1], rotate: [0, 180, 360] }}
+                transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+              />
+              <motion.div 
+                className="absolute -bottom-10 -left-10 w-32 h-32 bg-white rounded-full opacity-10"
+                animate={{ scale: [1.2, 1, 1.2], rotate: [360, 180, 0] }}
+                transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+              />
+            </div>
+            
+            <div className="relative z-10">
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <motion.div 
+                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center mb-4">
+                    <motion.div 
+                      className="bg-sourcing-orange rounded-full p-3 mr-4"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Star className="h-8 w-8 text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-white mb-2">Decade of Excellence</h3>
+                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
+                    </div>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">
+                    Expertise from over a decade of leadership in operations and supply chains, bringing seasoned insights to every partnership.
+                  </p>
+                  <motion.div 
+                    className="mt-4 flex items-center text-sourcing-orange font-medium"
+                    whileHover={{ x: 5 }}
+                  >
+                    <span className="mr-2">Learn More</span>
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      →
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                
+                <motion.div 
+                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center mb-4">
+                    <motion.div 
+                      className="bg-sourcing-orange rounded-full p-3 mr-4"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <TrendingUp className="h-8 w-8 text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-white mb-2">Proven Results</h3>
+                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
+                    </div>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">
+                    Proven track record of enhancing productivity and revenue growth for global clients with measurable outcomes.
+                  </p>
+                  <motion.div 
+                    className="mt-4 flex items-center text-sourcing-orange font-medium"
+                    whileHover={{ x: 5 }}
+                  >
+                    <span className="mr-2">View Case Studies</span>
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      →
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+                
+                <motion.div 
+                  className="group bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:bg-white/20 transition-all duration-300"
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.4 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="flex items-center mb-4">
+                    <motion.div 
+                      className="bg-sourcing-orange rounded-full p-3 mr-4"
+                      whileHover={{ rotate: 360 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                      <Shield className="h-8 w-8 text-white" />
+                    </motion.div>
+                    <div className="flex-1">
+                      <h3 className="font-bold text-xl text-white mb-2">Ethical Foundation</h3>
+                      <div className="h-1 bg-gradient-to-r from-sourcing-orange to-yellow-400 rounded-full w-3/4"></div>
+                    </div>
+                  </div>
+                  <p className="text-white/90 leading-relaxed">
+                    Commitment to ethical practices and sustainable growth, building lasting partnerships founded on integrity.
+                  </p>
+                  <motion.div 
+                    className="mt-4 flex items-center text-sourcing-orange font-medium"
+                    whileHover={{ x: 5 }}
+                  >
+                    <span className="mr-2">Our Values</span>
+                    <motion.div
+                      animate={{ x: [0, 5, 0] }}
+                      transition={{ duration: 1.5, repeat: Infinity }}
+                    >
+                      →
+                    </motion.div>
+                  </motion.div>
+                </motion.div>
+              </div>
+              
+              {/* Bottom stats section */}
+              <motion.div 
+                className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <div className="text-center">
+                  <motion.div 
+                    className="text-4xl font-bold text-white mb-2"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity }}
+                  >
+                    10+
+                  </motion.div>
+                  <div className="text-white/80">Years of Experience</div>
+                </div>
+                <div className="text-center">
+                  <motion.div 
+                    className="text-4xl font-bold text-white mb-2"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+                  >
+                    100+
+                  </motion.div>
+                  <div className="text-white/80">Successful Projects</div>
+                </div>
+                <div className="text-center">
+                  <motion.div 
+                    className="text-4xl font-bold text-white mb-2"
+                    animate={{ scale: [1, 1.1, 1] }}
+                    transition={{ duration: 2, repeat: Infinity, delay: 1 }}
+                  >
+                    50+
+                  </motion.div>
+                  <div className="text-white/80">Global Partners</div>
+                </div>
+              </motion.div>
+            </div>
           </div>
         </div>
         
