@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { motion } from 'framer-motion';
@@ -91,21 +90,11 @@ const AboutSection: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <motion.div
-            className="inline-flex items-center px-6 py-3 bg-sourcing-green/10 rounded-full mb-6"
-            whileHover={{ scale: 1.05 }}
-          >
-            <Sparkles className="w-5 h-5 text-sourcing-green mr-2" />
-            <span className="text-sourcing-green font-medium">Discover Our Story</span>
-          </motion.div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
             <span className="bg-gradient-to-r from-sourcing-green to-sourcing-orange bg-clip-text text-transparent">
               ABOUT US
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Transforming businesses through innovative consultancy solutions
-          </p>
         </motion.div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
@@ -189,26 +178,6 @@ const AboutSection: React.FC = () => {
                 </CardContent>
               </Card>
             </motion.div>
-
-            <motion.div
-              className="bg-gradient-to-r from-gray-100 to-gray-50 p-8 rounded-2xl"
-              whileHover={{ scale: 1.02 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-center">
-                <motion.div
-                  animate={{ rotate: 360 }}
-                  transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                  className="inline-block mb-4"
-                >
-                  <div className="w-16 h-16 bg-gradient-to-r from-sourcing-green to-sourcing-orange rounded-full flex items-center justify-center">
-                    <Users className="w-8 h-8 text-white" />
-                  </div>
-                </motion.div>
-                <h4 className="font-bold text-xl text-gray-900 mb-2">Our Impact</h4>
-                <p className="text-gray-600">Trusted by businesses across 5 continents</p>
-              </div>
-            </motion.div>
           </motion.div>
         </div>
         
@@ -220,7 +189,7 @@ const AboutSection: React.FC = () => {
           className="bg-gradient-to-r from-sourcing-green via-sourcing-green-light to-sourcing-green p-12 rounded-3xl text-center"
         >
           <h3 className="text-3xl font-bold mb-8 text-white">OUR EXPERTISE</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <motion.div 
               className="text-center"
               whileHover={{ y: -10 }}
@@ -232,20 +201,6 @@ const AboutSection: React.FC = () => {
               </div>
               <p className="text-white/80 text-sm">
                 Expertise from over a decade of leadership in operations and supply chains
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center"
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-white/90 mb-4">
-                <div className="text-4xl font-bold mb-2">98%</div>
-                <div className="text-lg">Client Satisfaction</div>
-              </div>
-              <p className="text-white/80 text-sm">
-                Proven track record of enhancing productivity and revenue growth for global clients
               </p>
             </motion.div>
             

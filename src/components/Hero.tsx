@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown, Sparkles, Globe, TrendingUp } from 'lucide-react';
@@ -14,7 +13,8 @@ const Hero: React.FC = () => {
   const features = [
     { icon: Globe, text: "Global Sourcing", delay: 0.2 },
     { icon: Sparkles, text: "Agro Products", delay: 0.4 },
-    { icon: TrendingUp, text: "Business Consultancy", delay: 0.6 }
+    { icon: TrendingUp, text: "Business & Supply Chain Consultancy", delay: 0.6 },
+    { icon: TrendingUp, text: "Branding", delay: 0.8 }
   ];
 
   useEffect(() => {
@@ -153,8 +153,7 @@ const Hero: React.FC = () => {
             className="text-white/90 text-lg md:text-xl lg:text-2xl mb-12 max-w-4xl mx-auto font-light leading-relaxed"
             style={{ textShadow: '0 2px 10px rgba(0,0,0,0.3)' }}
           >
-            Transforming agricultural landscapes through innovative sourcing strategies, 
-            sustainable practices, and comprehensive business solutions
+            Transforming Operations, Building Brands, and Driving Growth.
           </motion.p>
 
           {/* CTA Buttons */}
