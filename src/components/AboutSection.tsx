@@ -1,7 +1,8 @@
+
 import React from 'react';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { motion } from 'framer-motion';
-import { Globe, Shield, DollarSign, Users, Target, Eye, Sparkles, TrendingUp, Award } from 'lucide-react';
+import { Globe, Shield, TrendingUp, Award, Target, Eye } from 'lucide-react';
 
 const AboutSection: React.FC = () => {
   const features = [
@@ -180,45 +181,6 @@ const AboutSection: React.FC = () => {
             </motion.div>
           </motion.div>
         </div>
-        
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="bg-gradient-to-r from-sourcing-green via-sourcing-green-light to-sourcing-green p-12 rounded-3xl text-center"
-        >
-          <h3 className="text-3xl font-bold mb-8 text-white">OUR EXPERTISE</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <motion.div 
-              className="text-center"
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-white/90 mb-4">
-                <div className="text-4xl font-bold mb-2">10+</div>
-                <div className="text-lg">Years of Excellence</div>
-              </div>
-              <p className="text-white/80 text-sm">
-                Expertise from over a decade of leadership in operations and supply chains
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="text-center"
-              whileHover={{ y: -10 }}
-              transition={{ type: "spring", stiffness: 300 }}
-            >
-              <div className="text-white/90 mb-4">
-                <div className="text-4xl font-bold mb-2">100%</div>
-                <div className="text-lg">Ethical Practices</div>
-              </div>
-              <p className="text-white/80 text-sm">
-                Commitment to ethical practices and sustainable growth
-              </p>
-            </motion.div>
-          </div>
-        </motion.div>
       </div>
     </section>
   );
